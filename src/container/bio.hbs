@@ -1,0 +1,107 @@
+<div>
+    <div>
+        <h1>{{name}}</h1>
+    </div>
+    <div>
+        <em>Birthdate: {{birthdate}}</em>
+    </div>
+    <div>
+        <em>Birthplace: {{birthplace}}</em>
+    </div>
+    <div>
+        <em>Deathdate: {{deathdate}}</em>
+    </div>
+    <div>
+        <em>Deathplace: {{deathplace}}</em>
+    </div>
+    <div>
+        <em>Nationality: {{nationality}}</em>
+    </div>
+    <div>
+        <em>Occupation: {{occupation}}</em>
+    </div>
+    <hr>
+    <section>
+        {{> title data="Known for:" big=true}}
+        <div>{{known_for}}</div>
+    </section>
+    <section>
+        {{> title data="Education" big=true}}
+        <ul>
+            {{#each education}}
+            <li>
+                <div>{{degree}}</div>
+                <div>{{field}}</div>
+                <div>{{institution}}</div>
+                <div>{{year}}</div>
+            </li>
+            {{/each}}
+        </ul>
+    </section>
+    <section>
+        {{> title data="Notable publications:" big=true}}
+        <ul>
+            {{#each notable_publications}}
+            <li>
+                <cite>{{title}}</cite> ({{year}}), {{publisher}}
+            </li>
+            {{/each}}
+        </ul>
+    </section>
+    <section>
+        {{> title data="Partners:" big=true}}
+        <ul>
+            {{#each partners}}
+            <li>
+                <div>{{name}}: {{relationship}} ({{years}})</div>
+            </li>
+            {{/each}}
+        </ul>
+    </section>
+    <section>
+        {{> title data="Awards:" big=true}}
+        <ul>
+            {{#each awards}}
+            <li>
+                <cite>{{title}}</cite> ({{year}})
+                <p>{{description}}</p>
+            </li>
+            {{/each}}
+        </ul>
+    </section>
+    <section>
+        {{> title data="Influences:" big=true}}
+        <div><em>{{influences}}</em></div>
+    </section>
+    <section>
+        {{> title data="Influenced:" big=true}}
+        <div><em>{{influences}}</em></div>
+    </section>
+    <section>
+        {{> title data="Quotes:" big=true}}
+        <div><q>{{quotes}}</q></div>
+    </section>
+    <section>
+        {{> title data="Major discoveries:" big=true}}
+        <ul>
+            {{#each major_discoveries}}
+            <li>
+                <cite>{{title}}</cite> ({{year}})
+                <p>{{description}}</p>
+            </li>
+            {{/each}}
+        </ul>
+    </section>
+    <section>
+        {{> title data="Contributions:" big=true}}
+        <ul>
+            {{#with contributions}}
+            <li>
+                <cite>{{title}}</cite>
+                <p>{{description}} ({{year}})</p>
+                <div>{{field}}</div>
+            </li>
+            {{/with}}
+        </ul>
+    </section>
+</div>
