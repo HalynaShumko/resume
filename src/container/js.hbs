@@ -1,0 +1,65 @@
+<div>
+    <section>
+        {{> title data="JavaScript" big=true}}
+        <hr>
+        <hr>
+        <b>{{name}}</b>
+        <p>{{description}}</p>
+        <ul>
+            {{#with history}}
+            <li>
+                {{year}},
+                {{founder}}
+            </li>
+            {{/with}}
+        </ul>
+    </section>
+    <hr>
+    <section>
+        <span class="badge text-bg-success">types</span>
+        <div>{{types}}</div>
+    </section>
+    <br>
+    <section>
+        <span class="badge text-bg-success">syntax</span>
+        <ul>
+            {{#with syntax}}
+            <li>
+                <div><b>variables: </b>{{variables}}</div>
+                <div><b>functions: </b>{{functions}}</div>
+                <div><b>conditionals: </b>{{conditionals}}</div>
+                <div><b>loops: </b>{{loops}}</div>
+                <div><b>classes: </b>{{classes}}</div>
+            </li>
+            {{/with}}
+        </ul>
+    </section>
+    <br>
+    <section>
+        <span class="badge text-bg-success">features</span>
+        <div>{{features}}</div>
+    </section>
+    <br>
+    <section>
+        <span class="badge text-bg-success">libraries</span>
+        <div>{{libraries}}</div>
+    </section>
+    <br>
+    <section>
+        <span class="badge text-bg-success">tools</span>
+        <div>{{tools}}</div>
+    </section>
+    <br>
+    <section>
+        <span class="badge text-bg-success">community</span>
+        <ul>
+            {{#each community}}
+            <li>
+                <div>{{name}}</div>
+                <div>{{type}}</div>
+            </li>
+            {{/each}}
+        </ul>
+    </section>
+    <hr>
+</div>
