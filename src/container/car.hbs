@@ -1,0 +1,18 @@
+<div>
+    <section>
+        {{> title data="Car" big=true}}
+        <hr>
+        <hr>
+        <b>{{name}}</b>
+        <p>{{description}}</p>
+        <ul>
+            {{#with history}}
+            <li>
+                {{year}},
+                {{founder}}
+            </li>
+            {{/with}}
+        </ul>
+    </section>
+
+</div>
