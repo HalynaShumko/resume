@@ -1,0 +1,94 @@
+<div>
+    {{> title data="Facebook" big=true}}
+</div>
+<hr>
+<hr>
+<div><strong>{{name}}</strong></div>
+<span class="badge text-bg-primary">users</span>
+<ul>
+    {{#each users}}
+    <li>
+        <div><b>id: </b>{{id}}</div>
+        <div><b>name: {{name}}</b></div>
+        <div>gender: {{gender}}</div>
+        <div>age: {{age}}</div>
+        <ul>
+            <span class="badge text-bg-warning">friends</span>
+            {{#each friends}}
+            <li>
+                <div><b>id: </b>{{id}}</div>
+                <div><b>name: {{name}}</b></div>
+                <div>gender: {{gender}}</div>
+                <div>age: {{age}}</div>
+                <div><em>mutual friends: </em></div>
+                <ul>
+                    {{#each mutual_friends}}
+                    <li>
+                        <div><b>id: </b>{{id}}</div>
+                        <div><b>name: {{name}}</b></div>
+                        <div>gender: {{gender}}</div>
+                        <div>age: {{age}}</div>
+                        <ul>
+                            <div>{{#each mutual_friends}}</div>
+                            <li>
+                                <div><em>mutual friends: </em></div>
+                                <div><b>id: </b>{{id}}</div>
+                                <div><b>name: {{name}}</b></div>
+                                <div>gender: {{gender}}</div>
+                                <div>age: {{age}}</div>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </li>
+                    {{/each}}
+                </ul>
+                <ul>
+                    <div>{{#each groups}}</div>
+                    <span class="badge text-bg-success">groups</span>
+                    <li>
+                        <div><b>id: </b>{{id}}</div>
+                        <div><b>name: {{name}}</b></div>
+                        <p>description: {{description}}</p>
+                        <div>members:</div>
+                        <ul>
+                            {{#each members}}
+                            <li>
+                                <div><b>id: </b>{{id}}</div>
+                                <div><b>name: {{name}}</b></div>
+                                <div>gender: {{gender}}</div>
+                                <div>age: {{age}}</div>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </li>
+                    {{/each}}
+                </ul>
+            </li>
+            {{/each}}
+        </ul>
+        <ul>
+            <div>{{#each groups}}</div>
+            <span class="badge text-bg-success">groups</span>
+            <li>
+                <div><b>id: </b>{{id}}</div>
+                <div><b>name: {{name}}</b></div>
+                <p>description: {{description}}</p>
+                <div>members:</div>
+                <ul>
+                    {{#each members}}
+                    <li>
+                        <div><b>id: </b>{{id}}</div>
+                        <div><b>name: {{name}}</b></div>
+                        <div>gender: {{gender}}</div>
+                        <div>age: {{age}}</div>
+                    </li>
+                    {{/each}}
+                </ul>
+            </li>
+            {{/each}}
+        </ul>
+        <hr>
+        <hr>
+    </li>
+    {{/each}}
+</ul>
