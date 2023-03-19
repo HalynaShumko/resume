@@ -661,7 +661,6 @@ router.get('/web', function (req, res) {
 // ================================================================
 // ================================================================
 
-<<<<<<< HEAD
 // router.get Створює нам один ентпоїнт
 
 router.get('/car', function (req, res) {
@@ -757,7 +756,6 @@ router.get('/car', function (req, res) {
       },
       total: 28990,
     },
-=======
 router.get('/js', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -833,7 +831,6 @@ router.get('/js', function (req, res) {
         type: 'blog',
       },
     ],
->>>>>>> e390a2bf80a6b5cf69e6d285d802d9c3b9a88f1a
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
