@@ -659,6 +659,8 @@ router.get('/web', function (req, res) {
 })
 
 // ================================================================
+// ================================================================
+
 // router.get Створює нам один ентпоїнт
 
 router.get('/car', function (req, res) {
@@ -666,8 +668,6 @@ router.get('/car', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('car', {
-    layout: 'default',
-
     make: 'Toyota',
     model: 'Camry',
     year: 2022,
@@ -720,7 +720,7 @@ router.get('/car', function (req, res) {
           front: 2,
           side: 2,
           knee: 2,
-          rear: 2,.
+          rear: 2,
         },
         assistance: {
           blind_spot_monitoring: true,
@@ -757,5 +757,10 @@ router.get('/car', function (req, res) {
       total: 28990,
     },
   })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+// ================================================================
+
 // Підключаємо роутер до бек-енду
 module.exports = router
