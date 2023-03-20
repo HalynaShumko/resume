@@ -1,105 +1,172 @@
 <main>
-    <h1>Hello word</h1>
-    <h1 class="text-center">Hello word</h1>
-    <h1 class="text-center text-uppercase">Hello word</h1>
-    <h2>Second</h2>
-    <h2 class="text-end">Second</h2>
-    <h2 class="text-end text-lowercase">Second</h2>
-    <h3>wow super 3</h3>
-    <h3 class="text-capitalize">wow super super-3</h3>
+    <div class="row gy-5">
+        <section class="col-12">
+            <div class="card">
+                <img class="card-img-top" src="https://picsum.photos/400/200" alt="Product photo">
+                <div class="card-body">
+                    <h5 class="card-title">Product №746</h5>
+                    <p>Опис продукта</p>
+                    <a href="/summary" class="btn btn-primary">Open</a>
+                </div>
+            </div>
+        </section>
+        <section class="col-3">
+            <div class="card text-bg-primary">
 
-    <hr>
+                <div class="card-header">
+                    <div class="display-6">Menu</div>
+                    {{!-- <div>Menu</div> --}}
+                </div>
 
-    <div class="display-1">Hello word</div>
-    <div class="display-1 text-muted">Hello word</div>
-    <div class="display-5">Second</div>
-    <div class="display-6">wow 3</div>
+                <ul class="list-group ">
+                    <li class="list-group-item text-bg-dark">
+                        <a href="#" class="btn btn-link">Home page</a>
+                    </li>
+                    <li class="list-group-item text-bg-warning">
+                        <a href="#" class="btn btn-link">Summary page</a>
+                    </li>
+                    <li class="list-group-item text-bg-danger">
+                        <a href="#" class="btn btn-link">Skills page</a>
+                    </li>
+                </ul>
 
-    <hr>
+                <div class="card-footer">
+                    <button class="btn btn-dark btn-sm">Update list</button>
+                </div>
+            </div>
 
-    <span class="text-muted">Додатковий текст</span>
-    <div class="text-muted text-end">Додатковий текст</div>
-    <div class="text-muted text-end">
-        Додатковий <span class="display-6">текст</span>
+        </section>
+        <section class="col-9">
+            <table class="table table-striped table-bordered text-bg-success">
+                <thead>
+                    <tr>
+                        <th>
+                            #id
+                        </th>
+                        <th>
+                            name
+                        </th>
+                        <th>
+                            age
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>1</th>
+                        <td>Jony</td>
+                        <td>35</td>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <td>Ivan</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <td>Peter</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <th>4</th>
+                        <td>Ura</td>
+                        <td>31</td>
+                    </tr>
+                    <tr>
+                        <th>5</th>
+                        <td>Bob</td>
+                        <td>40</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+        <section class="col-12">
+            <div class="row g-2">
+                <div class="col-3">
+                    <div class="card text-bg-success">
+                        <div class="card-header text-center">Header</div>
+                        <div class="card-body text-center">
+                            <h6 class="card-title">This is title</h6>
+                            <p>This is content of our box</p>
+                            <button class="btn btn-light">Click!</button>
+                        </div>
+                        <div class="card-footer text-center">Footer</div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card text-bg-success">
+                        <div class="card-header text-center">Header</div>
+                        <div class="card-body text-center">
+                            <h6 class="card-title">This is title</h6>
+                            <p>This is content of our box</p>
+                            <button class="btn btn-light">Click!</button>
+                        </div>
+                        <div class="card-footer text-center">Footer</div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card text-bg-success">
+                        <div class="card-header text-center">Header</div>
+                        <div class="card-body text-center">
+                            <h6 class="card-title">This is title</h6>
+                            <p>This is content of our box</p>
+                            <button class="btn btn-light">Click!</button>
+                        </div>
+                        <div class="card-footer text-center">Footer</div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card text-bg-success">
+                        <div class="card-header text-center">Header</div>
+                        <div class="card-body text-center">
+                            <h6 class="card-title">This is title</h6>
+                            <p>This is content of our box</p>
+                            <button class="btn btn-light">Click!</button>
+                        </div>
+                        <div class="card-footer text-center">Footer</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
     </div>
 
-    <hr>
 
-    <button class="btn btn-primary">Основний</button>
-    <button class="btn btn-primary">
-        <span class="text-uppercase">Test button</span>
-    </button>
-    <button class="btn btn-primary">
-        <span class="text-uppercase">Test button</span>
-        <h1>Test</h1>
-    </button>
-    <button class="btn btn-secondary">
-        <span class="text-uppercase">Додатковий</span>
-    </button>
 
-    <div class="card">
+    {{!-- <ul class="list-group">
+        <li class="list-group-item">
+            <ul class="list-group">
+                <li class="list-group-item">Item 1.1</li>
+                <li class="list-group-item">Item 1.2</li>
+            </ul>
+        </li>
+        <li class="list-group-item">Item 2</li>
+        <li class="list-group-item">Item 3</li>
+    </ul>
+
+
+
+
+    <div class="card text-bg-dark">
+        <img class="card-img-top" src="https://picsum.photos/400/200" alt="Product photo">
         <div class="card-body">
-            <button class="btn btn-success">Успішний</button>
-            <br>
-            <button class="btn btn-danger">Небезпечний</button>
-            <br>
-            <br>
-            <button class="btn btn-warning">Попередження</button>
-            <button class="btn btn-info">Інформація</button>
-            <button class="btn btn-light">Світлий</button>
-            <button class="btn btn-dark">Темний</button>
-            <button class="btn btn-link">Посилання</button>
-            <a href="#" class="btn btn-link">Посилання</a>
-            <a href="#" class="btn btn-primary">Посилання</a>
+            <h5 class="card-title text-bg-primary">Product №746</h5>
+            <p class="text-bg-secondary">Опис<br>продукта</p>
+            <a href="/summary" class="btn btn-primary">Open</a>
         </div>
     </div>
 
-    <hr>
-
-    <div class="card">
-        <div class="card-body">
-            <p>My text</p>
-            <p class="text-primary">My text</p>
-            <p class="text-secondary">My text</p>
-            <p class="text-muted">My text</p>
-            <p class="text-success">My text</p>
-            <p class="text-danger">My text</p>
-            <p class="text-warning">My text</p>
-            <p class="text-info">My text</p>
-            <p class="text-light">My text</p>
-            <p class="text-dark">My text</p>
+    <div class="card text-bg-success">
+        <div class="card-header text-center">Header</div>
+        <div class="card-body text-center">
+            <h6 class="card-title">This is title</h6>
+            <p>This is content of our box</p>
+            <button class="btn btn-light">Click!</button>
         </div>
-    </div>
-
-    <hr>
-    <button class="btn btn-outline-primary">My button</button>
-    <button class="btn btn-secondary">Додати</button>
-    <button class="btn btn-outline-secondary">Редагувати</button>
-    <button class="btn btn-outline-danger">Видалити</button>
-    <hr>
-
-    <div class="card">
-        <div class="card-body">
-            This is content
-        </div>
-    </div>
-    <br>
-    <div class="card">
-        This is content
-    </div>
-    <br>
-    <div class="card">
-        <div class="card-body">
-            <button class="btn btn-outline-primary">My button</button>
-            <button class="btn btn-secondary">Додати</button>
-            <button class="btn btn-outline-secondary">Редагувати</button>
-            <button class="btn btn-outline-danger">Видалити</button>
-        </div>
+        <div class="card-footer text-center">Footer</div>
     </div>
 
 
 
-
-
-
-</main>
+</main> --}}
