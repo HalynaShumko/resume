@@ -1,0 +1,21 @@
+<div>
+    <ul>
+        {{#each list}}
+        <li>
+            <button{{#if @last}}disabled{{/if}}>{{name}} - {{@index}}</button>
+                {{!-- {{#if @last}} <button>{{name}}</button> {{/if}}
+                <span>{{name}}</span> --}}
+        </li>
+        {{/each}}
+    </ul>
+    <br>
+    <br>
+    <ul>
+        {{#each user}}
+        <li>
+            {{@key}}: {{#if value}}{{value}}{{else}}{{text}}{{/if}};
+        </li>
+        {{/each}}
+    </ul>
+
+</div>
