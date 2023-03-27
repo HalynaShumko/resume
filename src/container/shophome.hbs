@@ -67,11 +67,12 @@
                 <li class="nav-item">
                     {{#if isActive}}
                     <a class="nav-link active">{{text}}</a>
-                    {{/if}}
+                    {{else}}
                     {{#if isDisabled}}
                     <a class="nav-link disabled">{{text}}</a>
                     {{else}}
                     <a class="nav-link">{{text}}</a>
+                    {{/if}}
                     {{/if}}
                 </li>
                 {{/each}}
@@ -136,19 +137,24 @@
 </div>
 
 <hr>
-
-<div class="row col-12">
-
-    <ul class="nav">
-        {{#each footer}}
-        <li class="nav-item">
-            <a href="{{link}}" class="nav-link">{{text}}</a>
-        </li>
-
-        <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
-        </li>
-        {{/each}}
-    </ul>
-
+<div>
+    <footer>
+        <div class="row m-3">
+            {{#each footer}}
+            <div class="col-2">
+                {{#each this}}
+                <div class="nav">
+                    <div class="nav-item">
+                        {{#if @last}}
+                        <a href="{{link}}" class="nav-link disabled">{{text}}</a>
+                        {{else}}
+                        <a href="{{link}}" class="nav-link">{{text}}</a>
+                        {{/if}}
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+            {{/each}}
+        </div>
+    </footer>
 </div>

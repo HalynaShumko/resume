@@ -119,31 +119,43 @@
         </div>
 
     </section>
-    {{/with}}
-</div>
-<div class="row col-12">
-    <div class="card mx-4">
-        <div class="card-body">
-            {{#each actionList}}
-            {{#if isWarning}}
-            <span class="badge text-bg-warning mx-4">{{name}}</span>
-            {{!-- <button class="btn btn-warning mx-4">{{name}}</button> --}}
-            {{/if}}
-            {{#if isError}}
-            <span class="badge text-bg-outline-danger mx-4">{{name}}</span>
-            {{!-- <button class="btn btn-outline-danger mx-4">{{name}}</button> --}}
-            {{/if}}
-            {{#if isSuccess}}
-            <span class="badge text-bg-success mx-4">{{name}}</span>
-            {{!-- <button class="btn btn-success mx-4">{{name}}</button> --}}
-            {{/if}}
-            {{#if isGood}}
-            <span class="badge text-bg-outline-success mx-4">{{name}}</span>
-            {{!-- <button class="btn btn-outline-success mx-4">{{name}}</button> --}}
-            {{/if}}
-            {{/each}}
+
+    <section>
+        <div class="row col-12">
+            <div class="card mx-4">
+                <div class="card-body">
+
+                    <div class="alert">
+
+                        {{#each actionList}}
+
+                        {{#if isWarning}}
+                        <span class="text-bg-warning mx-4">{{name}}</span>
+                        {{!-- <button type="button" class="btn btn-warning mx-4">{{this}}</button> --}}
+                        {{/if}}
+
+                        {{#if isError}}
+                        <span class="text-bg-outline-danger mx-4">{{name}}</span>
+                        {{!-- <button class="btn btn-outline-danger mx-4">{{name}}</button> --}}
+                        {{/if}}
+                        {{#if isSuccess}}
+                        <span class="text-bg-success mx-4">{{name}}</span>
+                        {{!-- <button class="btn btn-success mx-4">{{name}}</button> --}}
+                        {{/if}}
+                        {{#if isGood}}
+                        <span class="text-bg-outline-success mx-4">{{name}}</span>
+                        {{!-- <button class="btn btn-outline-success mx-4">{{name}}</button> --}}
+                        {{/if}}
+
+                        {{/each}}
+
+                    </div>
+
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+    {{/with}}
 </div>
 
 <hr>
@@ -191,14 +203,14 @@
 
 <div class="row col-12 mb-5">
 
-    <ul class="nav">
+    <ul class="nav nav-tabs">
         {{#each footer}}
         <li class="nav-item">
             <a href="{{link}}" class="nav-link">{{text}}</a>
         </li>
 
         <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
+            <a href="{{link}}" class="nav-link disabled">{{text}}</a>
         </li>
         {{/each}}
     </ul>
