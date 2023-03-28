@@ -1,0 +1,57 @@
+<div>
+    {{> breadcrumb}}
+</div>
+
+<hr>
+
+<div class="row">
+    <div class="col-12">
+        {{#with newsData}}
+        <img class="card-img p-3" src="{{photo}}">
+        {{#with head}}
+        <h2 class="m-3">{{heading}}</h2>
+        <p class="m-3">{{description}}</p>
+        {{/with}}
+        {{#each body}}
+        <h4 class="m-3">{{title}}</h4>
+        <div class="m-3">{{text}}</div>
+        {{/each}}
+        {{/with}}
+    </div>
+</div>
+
+<hr>
+
+<div>
+    {{#with newsOtherBlock}}
+    <h2 class="text-center">{{title}}</h2>
+    <div class="row g-2 col-12 ms-3">
+        {{#each cards}}
+        <div class="col-3 py-3">
+            <div class="card text-bg-dark">
+                <h4 class="card-title p-3">{{title}}
+                    {{#if idNew}}
+                    <span class="badge text-bg-success rounded-pill">
+                        Нове
+                    </span>
+                    {{/if}}
+                    {{#if isTop}}
+                    <span class="badge text-bg-danger rounded-pill">Топ</span>
+                    {{/if}}
+                </h4>
+                <hr class="text-light">
+                <p class="card-body">{{description}}</p>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    {{/with}}
+</div>
+
+<hr>
+
+<div>
+    {{> shopaction}}
+</div>
+
+<hr>
