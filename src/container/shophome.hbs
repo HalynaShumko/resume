@@ -1,6 +1,6 @@
-<main class="m-5">
+{{!-- <header class="m-5">
     <div class="card">
-        <div class="card-body pt-4">
+        <div class="card-body">
             {{#with navigation}}
             <div class="row">
                 <div class="col-4">
@@ -9,19 +9,23 @@
                 <div class="col-8 d-flex justify-content-end">
                     <ul class="nav">
                         {{#each links}}
+                        {{#if @last}}
+                        <li class="nav-item">
+                            <a class="nav-link disabled">{{text}}</a>
+                        </li>
+                        {{else}}
                         <li class="nav-item">
                             <a href="{{href}}" class="nav-link">{{text}}</a>
                         </li>
+                        {{/if}}
                         {{/each}}
-                        <li class="nav-item">
-                            <a class="nav-link disabled">Disabled</a>
-                        </li>
                     </ul>
                 </div>
-                {{/with}}
             </div>
+            {{/with}}
         </div>
-</main>
+    </div>
+</header> --}}
 
 
 <main class="m-5">
@@ -78,7 +82,7 @@
                 {{/each}}
             </ul>
 
-            <div class="row g-2 col-12 m-5">
+            <div class="row g-2 col-12 m-3">
                 {{#each cards}}
                 <div class="col-4">
                     <div class="card">
@@ -108,7 +112,7 @@
 
 <div class="col-12 m-5">
     {{#with subscribe}}
-    <div class="card text-bg-dark p-3">
+    <div class="card text-bg-dark p-3 me-5">
         <h2>{{header}}</h2>
         <div class="d-flex justify-content-end">
             {{#each buttons}}
@@ -124,7 +128,7 @@
 
 <div class="col-12 m-5">
     {{#with service}}
-    <div class="card text-bg-success text-center p-3">
+    <div class="card text-bg-success text-center p-3 me-5">
         <h2>{{title}}</h2>
         <p class="pt-3 text-center">{{description}}</p>
         <div class="text-center">
@@ -137,7 +141,7 @@
 </div>
 
 <hr>
-<div>
+{{!-- <div>
     <footer>
         <div class="row m-3">
             {{#each footer}}
@@ -157,4 +161,4 @@
             {{/each}}
         </div>
     </footer>
-</div>
+</div> --}}
