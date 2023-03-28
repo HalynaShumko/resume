@@ -1,5 +1,4 @@
-<main class="m-5">
-
+{{!-- <header class="m-5">
     <div class="card">
         <div class="card-body">
             {{#with navigation}}
@@ -10,23 +9,26 @@
                 <div class="col-8 d-flex justify-content-end">
                     <ul class="nav">
                         {{#each links}}
+                        {{#if @last}}
+                        <li class="nav-item">
+                            <a class="nav-link disabled">{{text}}</a>
+                        </li>
+                        {{else}}
                         <li class="nav-item">
                             <a href="{{href}}" class="nav-link">{{text}}</a>
                         </li>
+                        {{/if}}
                         {{/each}}
-                        <li class="nav-item">
-                            <a class="nav-link disabled">Disabled</a>
-                        </li>
                     </ul>
                 </div>
-                {{/with}}
             </div>
+            {{/with}}
         </div>
-</main>
+    </div>
+</header> --}}
 
 <hr>
 <div class="col-12 m-5">
-
     <ol class="breadcrumb">
         {{#each breadcrumb}}
         <li class="breadcrumb-item">
@@ -80,24 +82,13 @@
                 </tr>
             </thead>
             <tbody>
+                {{#each body}}
                 <tr>
-                    {{!-- {{#each body}}
-                    <td>{{#each this}}{{this}}{{/each}}</td>
-                    {{/each}} --}}
-                    <th>id312</th>
-                    <td>red</td>
-                    <td>1100$</td>
+                    {{#each this}}
+                    <td>{{this}}</td>
+                    {{/each}}
                 </tr>
-                <tr>
-                    <th>id532</th>
-                    <td>blue</td>
-                    <td>1050$</td>
-                </tr>
-                <tr>
-                    <th>id643</th>
-                    <td>dark</td>
-                    <td>999$</td>
-                </tr>
+                {{/each}}
             </tbody>
             {{/with}}
         </table>
@@ -117,40 +108,28 @@
             {{/if}}
             {{/with}}
         </div>
-
     </section>
 
     <section>
         <div class="row col-12">
             <div class="card mx-4">
                 <div class="card-body">
-
                     <div class="alert">
-
                         {{#each actionList}}
-
                         {{#if isWarning}}
-                        <span class="text-bg-warning mx-4">{{name}}</span>
-                        {{!-- <button type="button" class="btn btn-warning mx-4">{{this}}</button> --}}
+                        <span class="btn btn-warning mx-4">{{name}}</span>
                         {{/if}}
-
                         {{#if isError}}
-                        <span class="text-bg-outline-danger mx-4">{{name}}</span>
-                        {{!-- <button class="btn btn-outline-danger mx-4">{{name}}</button> --}}
+                        <span class=" btn btn-outline-danger mx-4">{{name}}</span>
                         {{/if}}
                         {{#if isSuccess}}
-                        <span class="text-bg-success mx-4">{{name}}</span>
-                        {{!-- <button class="btn btn-success mx-4">{{name}}</button> --}}
+                        <span class=" btn btn-success mx-4">{{name}}</span>
                         {{/if}}
                         {{#if isGood}}
-                        <span class="text-bg-outline-success mx-4">{{name}}</span>
-                        {{!-- <button class="btn btn-outline-success mx-4">{{name}}</button> --}}
+                        <span class="btn btn-outline-success mx-4">{{name}}</span>
                         {{/if}}
-
                         {{/each}}
-
                     </div>
-
                 </div>
             </div>
         </div>
@@ -184,7 +163,6 @@
     </div>
     {{/with}}
 </div>
-
 <div class="col-12 m-3">
     {{#with service}}
     <div class="card text-bg-success text-center p-3">
@@ -201,18 +179,23 @@
 
 <hr>
 
-<div class="row col-12 mb-5">
+{{!-- <footer> --}}
 
-    <ul class="nav nav-tabs">
+    {{!-- <div class="row m-3">
         {{#each footer}}
-        <li class="nav-item">
-            <a href="{{link}}" class="nav-link">{{text}}</a>
-        </li>
-
-        <li class="nav-item">
-            <a href="{{link}}" class="nav-link disabled">{{text}}</a>
-        </li>
+        <div class="col-2">
+            {{#each this}}
+            <div class="nav">
+                <div class="nav-item">
+                    {{#if @last}}
+                    <a href="{{link}}" class="nav-link disabled">{{text}}</a>
+                    {{else}}
+                    <a href="{{link}}" class="nav-link">{{text}}</a>
+                    {{/if}}
+                </div>
+            </div>
+            {{/each}}
+        </div>
         {{/each}}
-    </ul>
-
-</div>
+    </div> --}}
+    {{!-- </footer> --}}

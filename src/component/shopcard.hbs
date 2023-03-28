@@ -1,0 +1,20 @@
+<div class="row g-2 col-12 ms-3">
+    {{#each cards}}
+    <div class="col-4">
+        <div class="card">
+            <img class="card-img-top" src="{{image}}" alt="Product photo">
+            <h4 class="card-title p-3">{{title}}
+                {{#if isHot}}
+                <span class="badge text-bg-warning rounded-pill text-uppercase">Hot!</span>
+                {{/if}}
+                {{#if idNew}}
+                <span class="badge text-bg-primary rounded-pill">
+                    Нове
+                </span>
+                {{/if}}
+            </h4>
+            <p class="card-body">{{description}}</p>
+        </div>
+    </div>
+    {{/each}}
+</div>
