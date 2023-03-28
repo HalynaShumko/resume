@@ -1,0 +1,28 @@
+<header class="m-5">
+    <div class="card">
+        <div class="card-body">
+            {{#with navigation}}
+            <div class="row">
+                <div class="col-4">
+                    <h1>{{Logo}}</h1>
+                </div>
+                <div class="col-8 d-flex justify-content-end">
+                    <ul class="nav">
+                        {{#each links}}
+                        {{#if @last}}
+                        <li class="nav-item">
+                            <a class="nav-link disabled">{{text}}</a>
+                        </li>
+                        {{else}}
+                        <li class="nav-item">
+                            <a href="{{href}}" class="nav-link">{{text}}</a>
+                        </li>
+                        {{/if}}
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+            {{/with}}
+        </div>
+    </div>
+</header>
