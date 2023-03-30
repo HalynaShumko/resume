@@ -1,0 +1,13 @@
+<div class="col-12 m-5">
+    {{#with subscribe}}
+    <div class="card text-bg-dark p-3 me-5">
+        <h2>{{header}}</h2>
+        <div class="d-flex justify-content-end">
+            {{#each buttons}}
+            <a href="{{link}}" class="btn btn-primary m-2">{{text}}</a>
+            {{/each}}
+        </div>
+        <p class="pt-3">{{description}}</p>
+    </div>
+    {{/with}}
+</div>
