@@ -1,0 +1,107 @@
+<hr>
+
+<main class="p-5">
+    <div class="row">
+        {{#with header}}
+        <div class="col-9">
+            <h1>{{title}}</h1>
+        </div>
+        <div class="col-3">
+            {{#with button}}
+            <a href="{{link}}" class="btn btn-outline-dark">{{text}}</a>
+            {{/with}}
+        </div>
+        {{/with}}
+    </div>
+
+    <hr>
+
+    <div>
+        {{#each goodsBlock}}
+        <div class="card m-3">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-2">
+                        <img class="card-img-top" src="{{image}}" alt="Product photo">
+                    </div>
+                    <div class="col-4">
+                        <h4>{{name}}</h4>
+                        <p>{{description}}</p>
+                    </div>
+                    <div class="col-2 py-5">
+                        {{!-- <div class="text-center"> --}}
+                            {{#with price}}
+                            <h6>{{title}}</h6>
+                            <h5>{{value}}</h5>
+                            {{/with}}
+                            {{!--
+                        </div> --}}
+                    </div>
+                    <div class="col-2 py-5 mt-3">
+                        <div class="text-center">{{amount}}</div>
+                    </div>
+                    <div class="col-2">
+                        {{#each buttons}}
+                        <div class="py-2">
+                            {{#if isPrimary}}
+                            <button class="btn btn-primary">{{text}}</button>
+                            {{/if}}
+                            {{#if isDanger}}
+                            <button class="btn btn-outline-danger">{{text}}</button>
+                            {{/if}}
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        {{/each}}
+    </div>
+
+    <hr>
+    <div class="row">
+        {{#with total}}
+        <div class="col-8 p-3 pt-3">
+            <div>
+                <h4>{{title}}</h4>
+                <h2>{{amount}}</h2>
+                <div>{{delivery}}</div>
+            </div>
+        </div>
+        <div class="col-4 p-3 pt-3">
+            <div>
+                {{#each buttons}}
+                <div class="py-2">
+                    {{#if isSuccess}}
+                    <button class="btn btn-success">{{text}}</button>
+                    {{/if}}
+                    {{#if isOutline}}
+                    <button class="btn btn-outline-success">{{text}}</button>
+                    {{/if}}
+                </div>
+                {{/each}}
+            </div>
+        </div>
+        {{/with}}
+    </div>
+
+    <hr>
+
+    <div class="py-3">
+        {{#with goodsOtherBlock}}
+        <h2 class="text-center">{{title}}</h2>
+        {{> shopcard}}
+        {{/with}}
+    </div>
+
+    <hr>
+
+    <div>
+        {{> shopsubscribe}}
+    </div>
+
+    <hr>
+
+</main>
