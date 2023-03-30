@@ -133,41 +133,36 @@
 
             <div class="col-8">
                 <div class="row">
-
                     <div class="col-12">
                         {{#with delivery}}
                         <div class="row g-3">
-
                             <h2 class="ms-5">{{title}}</h2>
                             <div class="card">
-                                <div class="col-6 p-3">
-                                    {{#each select}}
-
-                                    <label class="form-label">{{label}}</label>
-                                    <select class="form-select">
-                                        <option selected>{{placeholder}}</option>
-                                        {{#each options}}
-                                        <option value="{{value}}">{{text}}</option>
+                                <div class="card-body">
+                                    <div class="row">
+                                        {{#each select}}
+                                        <div class="col-6 p-3">
+                                            <label class="form-label">{{label}}</label>
+                                            <select class="form-select">
+                                                <option selected>{{placeholder}}</option>
+                                                {{#each options}}
+                                                <option value="{{value}}">{{text}}</option>
+                                                {{/each}}
+                                            </select>
+                                        </div>
                                         {{/each}}
-                                    </select>
-
-                                    {{/each}}
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="col-6 p-3">
+                            <div class="form-check p-2">
                                 {{#each delivery_type}}
-                                <div class="form-check p-2">
-                                    <label class="form-check-label">{{type}}</label>
-                                    <input name="delivery" type="radio" class="form-check-input">
-                                </div>
-                                {{/each}}
-                            </div>
-
-                            <div class="col-6 p-1 text-end">
-                                {{#each delivery_type}}
-                                <div class="form-check m-4">
-                                    <label class="form-check-label text-end">{{value}}</label>
+                                <div class="form-check my-1">
+                                    <input class="form-check-input" type="radio" name="delivery_type" type="radio">
+                                    <label class="form-check-label d-flex justify-content-between" for="flexRadio">
+                                        <div>{{type}}</div>
+                                        <p>{{value}}</p>
+                                    </label>
                                 </div>
                                 {{/each}}
                             </div>
@@ -175,6 +170,7 @@
                             <hr>
 
                             <div class="col-12 p-3">
+                                <h2>{{title}}</h2>
                                 {{#each payment}}
                                 <div class="form-check p-2">
                                     <label class="form-check-label">{{type}}</label>

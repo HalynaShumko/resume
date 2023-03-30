@@ -2431,6 +2431,7 @@ router.get('/shoporder', function (req, res) {
           value: 'За тарифами перевізника',
         },
       ],
+      title: 'Оплата',
       payment: [
         {
           type: 'Оплата при отриманні',
