@@ -298,12 +298,14 @@
                             {{/with}}
                             {{#with purchase_frequency}}
                             <label class="form-label">{{label}}</label>
+
                             <select class="form-select" multiple aria-label="multiple select example">
                                 <option selected>{{placeholder}}</option>
                                 {{#each options}}
                                 <option value="{{value}}">{{text}}</option>
                                 {{/each}}
                             </select>
+
                             {{/with}}
                             {{#with factors}}
                             <h5 class="py-3">{{title}}</h5>
