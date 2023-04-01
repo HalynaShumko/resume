@@ -143,10 +143,12 @@
                                         {{#each select}}
                                         <div class="col-6 p-3">
                                             <label class="form-label">{{label}}</label>
-                                            <select class="form-select">
+                                            <select class="form-select" multiple aria-label="multiple select example">
                                                 <option selected>{{placeholder}}</option>
                                                 {{#each options}}
-                                                <option value="{{value}}">{{text}}</option>
+                                                <div>
+                                                    <option value="{{value}}">{{text}}</option>
+                                                </div>
                                                 {{/each}}
                                             </select>
                                         </div>
@@ -234,7 +236,7 @@
 
                             {{#with availabel_coupon}}
                             <label class="form-label">{{label}}</label>
-                            <select class="form-select p-3">
+                            <select class="form-select p-3" multiple aria-label="multiple select example">
                                 <option selected>{{placeholder}}</option>
                                 {{#each options}}
                                 <option value="{{value}}">{{text}}</option>
@@ -245,7 +247,7 @@
                             {{#with friend_coupon}}
                             <label class="form-label">{{label}}</label>
                             <div>
-                                <select class="form-select p-0 ps-3 my-2">
+                                <select class="form-select p-0 ps-3 my-2" multiple aria-label="multiple select example">
                                     <option selected>{{placeholder}}</option>
                                     {{#each options}}
                                     <option value="{{value}}">{{text}}</option>
@@ -296,7 +298,7 @@
                             {{/with}}
                             {{#with purchase_frequency}}
                             <label class="form-label">{{label}}</label>
-                            <select class="form-select">
+                            <select class="form-select" multiple aria-label="multiple select example">
                                 <option selected>{{placeholder}}</option>
                                 {{#each options}}
                                 <option value="{{value}}">{{text}}</option>
