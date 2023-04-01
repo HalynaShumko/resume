@@ -2431,8 +2431,10 @@ router.get('/shoporder', function (req, res) {
           value: 'За тарифами перевізника',
         },
       ],
+    },
+    payment: {
       title: 'Оплата',
-      payment: [
+      payment_type: [
         {
           type: 'Оплата при отриманні',
           description: 'За тарифами перевізника',
@@ -2441,33 +2443,33 @@ router.get('/shoporder', function (req, res) {
           type: 'Оплатити зараз',
         },
       ],
-      contact: {
-        title: 'Контактні дані отримувача',
-        surname: {
-          label: 'Прізвище',
-          placeholder: 'Іванов',
-          caption: 'Введіть прізвище',
-        },
-        name: {
-          label: 'Ім’я',
-          placeholder: 'Іван',
-          caption: 'Введіть Ім’я',
-        },
-        phone: {
-          label: 'Мобільний телефон',
-          placeholder: '+38 (XXX) XXX XX XX',
-          caption: 'Введіть телефон',
-        },
-        email: {
-          label: 'Пошта',
-          placeholder: 'ivanivanov@ukr.net',
-          caption: 'Введіть Пошту',
-        },
+    },
+    contact: {
+      title: 'Контактні дані отримувача',
+      surname: {
+        label: 'Прізвище',
+        placeholder: 'Іванов',
+        caption: 'Введіть прізвище',
       },
-      coment: {
-        label: 'Коментар',
-        placeholder: 'Я хочу, щоб',
+      name: {
+        label: 'Ім’я',
+        placeholder: 'Іван',
+        caption: 'Введіть Ім’я',
       },
+      phone: {
+        label: 'Мобільний телефон',
+        placeholder: '+38 (XXX) XXX XX XX',
+        caption: 'Введіть телефон',
+      },
+      email: {
+        label: 'Пошта',
+        placeholder: 'ivanivanov@ukr.net',
+        caption: 'Введіть Пошту',
+      },
+    },
+    coment: {
+      label: 'Коментар',
+      placeholder: 'Я хочу, щоб',
     },
     coupon: {
       title: 'Купони',
