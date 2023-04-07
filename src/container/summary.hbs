@@ -3,29 +3,33 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
 --}}
 
-<div>
-    {{#with main}}
-    <main>
-        <section class="mb-5">
-            {{> title data=summary.title big=true}}
-            <div>
-                <p>{{summary.text}}</p>
-            </div>
-        </section>
-        {{#with experience}}
-        <section>
+<main class="p-5">
+    <div class="row g-3">
+        <div class="col-12">
+            {{#with main}}
+            <main>
+                <section class="mb-5">
+                    {{> title data=summary.title big=true}}
+                    <div>
+                        <p>{{summary.text}}</p>
+                    </div>
+                </section>
+                {{#with experience}}
+                <section>
 
-            {{> title data=title}}
+                    {{> title data=title}}
 
-            <div>
-                <p>{{text}}</p>
-            </div>
-        </section>
-        {{/with}}
-    </main>
-    {{/with}}
+                    <div>
+                        <p>{{text}}</p>
+                    </div>
+                </section>
+                {{/with}}
+            </main>
+            {{/with}}
 
-</div>
+        </div>
+    </div>
+</main>
 
 {{!--
 Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs

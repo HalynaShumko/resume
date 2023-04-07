@@ -7,37 +7,43 @@
 
 <head>
 	<title>
-		{{page.title}}
+		Basic page
 	</title>
 	<meta charset='utf-8' />
-	<link href='css/normalize.css' rel='stylesheet' />
 	<link href='css/index.css' rel='stylesheet' />
 
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-
-	{{! ↓ підключаємо іконки bootstrap --}}
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-
-
-	{{!-- <style>
-		h1 {
-			color: green;
-		}
-	</style> --}}
-
-	<link href='css/style.css' rel='stylesheet' />
-
 </head>
 
 <body>
+
+	<header class="p-5">
+		{{#with header}}
+		<div class="card">
+			<div class="card-body">
+				<div class="row">
+					<div class="col-9">
+						{{#with name}}
+						<h5>
+							{{firstname}}
+							{{lastname}}
+						</h5>
+						{{/with}}
+					</div>
+					<div class="col-3">
+						<h5>{{title}}</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+		{{/with}}
+	</header>
 
 	{{! ↓ ця кострукція показує куди шаблонізатору треба вставляти код з container файлу --}}
 	{{{body}}}
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
-	<script src="https://kit.fontawesome.com/10bce0ee96.js" crossorigin="anonymous"></script>
 
 </body>
 
